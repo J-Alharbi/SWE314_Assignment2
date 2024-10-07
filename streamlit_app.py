@@ -12,8 +12,6 @@ def decrypt(ciphertext, shift):
                 decrypted.append(chr((ord(char) - ord('a') - shift) % 26 + ord('a')))
             elif char.isupper():  
                 decrypted.append(chr((ord(char) - ord('A') - shift) % 26 + ord('A')))
-        elif char.isdigit():  
-            decrypted.append(chr((ord(char) - ord('0') - shift % 10) % 10 + ord('0')))
         else:
             decrypted.append(char)
     return ''.join(decrypted)
